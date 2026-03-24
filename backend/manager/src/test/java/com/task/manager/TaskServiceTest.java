@@ -15,8 +15,7 @@ class TaskServiceTest {
     @Test
     void testAddTask() {
 
-        Task task = new Task(1L, "Test Task", false, null);
-
+        Task task = new Task(1L, "Test Task", false);
         when(taskRepository.save(task)).thenReturn(task);
 
         Task saved = taskService.addTask(task);
